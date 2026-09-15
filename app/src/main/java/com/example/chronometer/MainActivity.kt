@@ -101,6 +101,18 @@ fun ChronometerScreen() {
         ) {
             Text("Pause")
         }
+        Spacer(
+            modifier = Modifier.height(12.dp)
+        )
+
+        Button(
+            onClick = {
+                isRunning = false
+                elapsedTime = 0L
+            }
+        ) {
+            Text("Reset")
+        }
     }
 }
 fun formatTime(milliseconds: Long): String {
